@@ -1,2 +1,11 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>User info</h1>
+
+<%= image_tag @user.get_profile_image(80, 80) %><br>
+
+<label>name</label><br>
+<%= @user.name %><br>
+
+<label>introduction</label><br>
+<%= @user.introduction %><br>
+
+<%= link_to 'edit_fontawesome', edit_user_path(@user) %>
