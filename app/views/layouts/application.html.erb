@@ -12,9 +12,10 @@
 
   <body>
     <header>
+      <a href="root_path">Bookers</a>
       <% if user_signed_in? %>
         <li>
-          <%= link_to "Home", root_path %>
+          <%= link_to "Home", user_path(current_user.id) %>
         </li>
         <li>
           <%= link_to "Users", root_path %>
@@ -41,6 +42,12 @@
         </li>
       <% end %>
     </header>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag :div, message, class: message_type %>
+    <% end %>
     <%= yield %>
+    <footer>
+      <p>CopyRight Infratop.inc</p>
+    </footer>
   </body>
 </html>
