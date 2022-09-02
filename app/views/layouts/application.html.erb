@@ -12,7 +12,7 @@
 
   <body>
     <header>
-      <a href="root_path">Bookers</a>
+      <a><%= link_to 'Bookers', root_path %></a>
       <% if user_signed_in? %>
         <li>
           <%= link_to "Home", user_path(current_user.id) %>
