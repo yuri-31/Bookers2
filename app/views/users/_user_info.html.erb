@@ -1,0 +1,13 @@
+<h1>User info</h1>
+
+<%= image_tag user.get_profile_image(80, 80) %><br>
+
+<label>name</label><br>
+<%= user.name %><br>
+
+<label>introduction</label><br>
+<%= user.introduction %><br>
+
+<% if user == current_user %>
+    <%= link_to 'logo_fontawesome', edit_user_path(user) %>
+<% end %>
