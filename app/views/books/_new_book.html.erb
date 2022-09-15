@@ -1,13 +1,13 @@
-<h1>New Book</h1>
-    
-    <%= form_with model: new_book, url: books_path(new_book.id), method: :post do |f| %>
+<h1 class="mt-5">New Book</h1>
         
-        <label>Title</label><br>
-        <%= f.text_field :title %><br>
+<%= form_with model: new_book, url: books_path(new_book.id), method: :post do |f| %>
+            
+    <label>Title</label><br>
+    <%= f.text_field :title, class: 'mb-3 col-12' %><br>
+            
+    <label>Opinion</label><br>
+    <%= f.text_area :body, class: 'mb-3 col-12' %><br>
+            
+    <%= f.submit 'Create Book', class: 'btn btn-success btn-block col-9 mx-auto' %>
         
-        <label>Opinion</label><br>
-        <%= f.text_area :body %><br>
-        
-        <%= f.submit 'Create Book' %>
-    
-    <% end %>
+<% end %>

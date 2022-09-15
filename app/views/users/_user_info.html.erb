@@ -1,13 +1,26 @@
-<h1>User info</h1>
+<h1 class="mb-2">User info</h1>
 
-<%= image_tag user.get_profile_image(80, 80) %><br>
+<%= image_tag user.get_profile_image(100, 100) %><br>
 
-<label>name</label><br>
-<%= user.name %><br>
-
-<label>introduction</label><br>
-<%= user.introduction %><br>
+<table class="table">
+    <tbody>
+        <tr>
+            <th>name</th>
+            <th><%= user.name %></th>
+        </tr>
+        <tr>
+            <th>introduction</th>
+            <th><%= user.introduction %></th>
+        </tr>
+    </tbody>
+</table>
 
 <% if user == current_user %>
-    <%= link_to 'logo_fontawesome', edit_user_path(user) %>
+    <div class="row">
+        <div class="col-12">
+            <%= link_to edit_user_path(user), class: 'btn btn-outline-secondary btn-block' do  %>
+                <i class="fa fa-user-cog"></i>
+            <% end %>
+        </div>
+    </div>
 <% end %>
