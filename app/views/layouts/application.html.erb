@@ -15,7 +15,7 @@
     <header class="bg-dark shadow-sm">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container text-light">
-          <a class="navbar-brand p-3" href="/"><%= link_to 'Bookers', root_path, class: 'text-light' %></a>
+          <a class="navbar-brand" href="/"><span>Bookers</span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -25,25 +25,25 @@
             <% if user_signed_in? %>
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-house-user text-light"></i>
+                  <i class="fas fa-home text-light"></i>
                   <%= link_to "Home", user_path(current_user.id), class: 'text-light' %>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-users text-light"></i>
+                  <i class="fas fa-users text-light"></i>
                   <%= link_to "Users", users_path, class: 'text-light' %>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-book-open text-light"></i>
+                  <i class="fas fa-book-open text-light"></i>
                   <%= link_to "Books", books_path, class: 'text-light' %>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-right-from-bracket text-light"></i>
+                  <i class="fas fa-sign-out-alt text-light"></i>
                   <%= link_to "Log out", destroy_user_session_path, method: :get, class: 'text-light' %>
                 </div>
               </li>
@@ -52,25 +52,25 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-house-user text-light"></i>
+                  <i class="fas fa-home text-light"></i>
                   <%= link_to "Home", root_path, class: 'text-light' %>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-link text-light"></i>
+                  <i class="fas fa-link text-light"></i>
                   <%= link_to "About", about_path, class: 'text-light' %>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-user-plus text-light"></i>
+                  <i class="fas fa-user-plus text-light"></i>
                   <%= link_to "Sign up", new_user_registration_path, class: 'text-light' %>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="nav-link">
-                  <i class="fa-solid fa-right-to-bracket text-light"></i>
+                  <i class="fas fa-sign-in-alt text-light"></i>
                   <%= link_to "Log in", new_user_session_path, class: 'text-light' %>
                 </div>
               </li>
